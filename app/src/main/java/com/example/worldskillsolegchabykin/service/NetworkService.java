@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkService {
     private static NetworkService mInstance;
-    private static final String BASE_URL = "http://api.areas.su";
+    private static final String BASE_URL = "https://www.cbr-xml-daily.ru/daily_json.js";
     private Retrofit mRetrofit;
 
     private NetworkService() {

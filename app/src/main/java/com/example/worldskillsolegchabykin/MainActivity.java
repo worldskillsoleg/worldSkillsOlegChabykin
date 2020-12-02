@@ -7,12 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ImageButton btnMap;
     ImageButton btnExchange;
     Button btnAuth;
-
+    TextView tvMainDate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMap = (ImageButton) findViewById(R.id.btnMap);
         btnExchange = (ImageButton) findViewById(R.id.btnExchange);
         btnAuth = (Button) findViewById(R.id.btnAuth);
+        tvMainDate=(TextView) findViewById(R.id.tvMainDate);
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
+        String formattedDate = df.format(c);
+        tvMainDate.setText(formattedDate);
         btnMap.setOnClickListener(this::onClick);
         btnExchange.setOnClickListener(this::onClick);
     }

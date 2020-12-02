@@ -7,7 +7,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.worldskillsolegchabykin.adapters.ValuteAdapter;
-import com.example.worldskillsolegchabykin.models.Valute;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ import java.util.Locale;
 
 public class ValuteActivity extends AppCompatActivity {
 ValuteAdapter valuteAdapter;
-ArrayList<Valute> list=new ArrayList<Valute>();
+ArrayList<cbValute> list=new ArrayList<cbValute>();
 ListView listValute;
 TextView tvDate;
     @Override
@@ -36,7 +35,7 @@ TextView tvDate;
     }
     private void fillData(){
         for (int i=0;i<5;i++){
-            list.add(new Valute("USD","Американский доллар","64,95","64,95"));
+            list.add(new cbValute("USD","Американский доллар","64,95","64,95"));
 
         }
     }

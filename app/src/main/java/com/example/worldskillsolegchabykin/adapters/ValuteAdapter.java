@@ -1,7 +1,6 @@
 package com.example.worldskillsolegchabykin.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.worldskillsolegchabykin.R;
-import com.example.worldskillsolegchabykin.models.Bankomat;
-import com.example.worldskillsolegchabykin.models.Valute;
 
 import java.util.ArrayList;
 
@@ -18,9 +15,9 @@ public class ValuteAdapter extends BaseAdapter {
 
     Context ctx;
     LayoutInflater lInflater;
-    ArrayList<Valute> objects;
+    ArrayList<cbValute> objects;
 
-    public ValuteAdapter(Context context, ArrayList<Valute> products) {
+    public ValuteAdapter(Context context, ArrayList<cbValute> products) {
         ctx = context;
         objects = products;
         lInflater = (LayoutInflater) ctx
@@ -54,7 +51,7 @@ public class ValuteAdapter extends BaseAdapter {
             view = lInflater.inflate(R.layout.item_valute, parent, false);
         }
 
-        Valute p = getProduct(position);
+        cbValute p = getProduct(position);
 
         // заполняем View в пункте списка данными из товаров: наименование, цена
         // и картинка
@@ -66,8 +63,8 @@ public class ValuteAdapter extends BaseAdapter {
     }
 
     // товар по позиции
-    Valute getProduct(int position) {
-        return ((Valute) getItem(position));
+    cbValute getProduct(int position) {
+        return ((cbValute) getItem(position));
     }
 
 
