@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="WorldSkillsBank"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/museum" />
+
+    <ImageButton
+        android:id="@+id/btnMap"
+        android:layout_width="343dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="88dp"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="2dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@mipmap/map" />
+
+    <ImageButton
+        android:id="@+id/btnExchange"
+        android:layout_width="343dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMap"
+        app:srcCompat="@mipmap/exchange" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Отделения и банкоматы"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMap"
+        app:layout_constraintEnd_toEndOf="@+id/btnMap"
+        app:layout_constraintTop_toTopOf="@+id/btnMap"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="Курсы валют"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnExchange"
+        app:layout_constraintEnd_toEndOf="@+id/btnExchange"
+        app:layout_constraintTop_toTopOf="@+id/btnExchange"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <Button
+        android:id="@+id/btnAuth"
+        android:layout_width="343dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="48dp"
+        android:background="#3F51B5"
+        android:text="Войти"
+        app:backgroundTint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnExchange" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
