@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMap = (ImageButton) findViewById(R.id.btnMap);
         btnExchange = (ImageButton) findViewById(R.id.btnExchange);
         btnAuth = (Button) findViewById(R.id.btnAuth);
-
+    btnMap.setOnClickListener(this::onClick);
     }
 
     @Override
