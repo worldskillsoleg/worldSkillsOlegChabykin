@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnExchange = (ImageButton) findViewById(R.id.btnExchange);
         btnAuth = (Button) findViewById(R.id.btnAuth);
         btnMap.setOnClickListener(this::onClick);
+        btnExchange.setOnClickListener(this::onClick);
     }
 
     @Override
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, MapActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.btnAuth:
+            case R.id.btnExchange:
                 intent=new Intent(this,ValuteActivity.class);
                 startActivity(intent);
                 break;
